@@ -1,0 +1,174 @@
+@import "./reset.scss";
+/* common style */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,body {
+  position: relative;
+  height: 100%;
+  background-color: #F7F7F7;
+  font-size: 65%;
+  color: #242729;
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-family: 'San Francisco', Helvetica, Tahoma, Arial, "PingFang SC",STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+#app {
+  display: block;
+  overflow: hidden;
+}
+
+input,
+a,
+button,
+div {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+#app {
+  font-size: 1.8rem;
+}
+
+.font12 {
+  font-size: 1.2rem;
+}
+.font14 {
+  font-size: 1.4rem;
+}
+.font16 {
+  font-size: 1.6rem;
+}
+.font18 {
+  font-size: 1.8rem;
+}
+.font20 {
+  font-size: 2rem;
+}
+.font22 {
+  font-size: 2.2rem;
+}
+.font24 {
+  font-size: 2.4rem;
+}
+
+.btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #abcc29;
+}
+.btn-disabled {
+  color: #ffffff;
+  background-color: #cccccc;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fade-transition {
+  transition: opacity .5s ease;
+  opacity: 1;
+}
+
+// vuejs过渡动画
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+
+.fade-transition {
+  transition: opacity .3s ease;
+}
+.fade-enter, .fade-leave {
+  opacity: 0;
+}
+
+.scale-transition {
+  transition: transform .3s ease;
+  transform: scale(1);
+}
+.scale-enter, .scale-leave {
+  transform: scale(0);
+}
+
+.bounceInUp-transition {
+  transition: transform .3s ease;
+  transform: translateY(0);
+}
+.bounceInUp-enter, .bounceInUp-leave {
+  transform: translateY(100%);
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+
+/* app index loading style */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app-ready-modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-100%);
+  z-index: 888;
+  white-space: nowrap;
+}
+.app-ready-info{
+  padding: 1rem 1.8rem 1.1rem 1.5rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0;
+}
+.app-ready-info-img{
+  margin-right: 1rem;
+  display:inline-block;
+  vertical-align:middle;
+  animation-name:rotate;
+  animation-duration: 1.2s;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+}
+.app-ready-info-text{
+  display:inline-block;
+  vertical-align:middle;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
